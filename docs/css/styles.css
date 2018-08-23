@@ -221,6 +221,7 @@ header .company-name img {
 }
 .info img {
 	max-height: 650px;
+	border-radius: 18px;
 }
 .info {
 	padding: 0 0 100px 0;
