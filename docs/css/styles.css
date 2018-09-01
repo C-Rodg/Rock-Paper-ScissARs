@@ -229,6 +229,11 @@ header .company-name img {
 .info:first-child {
 	padding-top: 100px;
 }
+
+.info.how-to-play {
+	background-color: #d8d8d8;
+	padding: 35px 0;
+}
 .subtext {
 	margin-top: 10px;
 }
