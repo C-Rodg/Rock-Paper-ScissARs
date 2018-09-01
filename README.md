@@ -4,15 +4,19 @@ An augmented reality rock, paper, scissors game.
 
 ## Description
 
-Break work down into manageable intervals using the Pomodoro technique with this menu bar timer. Excellent time management is a must for maximum productivity!
+An augmented reality roshambo game for iOS. Experience the classic game of Rock, Paper, Scissors like never before.
 
 ## Availability
 
 Coming soon to the [iOS app store](https://itunes.apple.com/).
 
-## Features
+## How to Play
 
-- Coming soon..
+Simply show your hand to your devices camera and it will detect your current hand formation. After beginning a game, just display your hand position to the camera on your device and tap the overlay icon when ready to 'shoot'.
+
+- _Rock_: Beats scissors. Loses to paper.
+- _Paper_: Beats rock. Loses to scissors.
+- _Scissors_: Beats paper. Loses to rock.
 
 ## Documentation
 
