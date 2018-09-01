@@ -14,9 +14,9 @@ Coming soon to the [iOS app store](https://itunes.apple.com/).
 
 Simply show your hand to your devices camera and it will detect your current hand formation. After beginning a game, just display your hand position to the camera on your device and tap the overlay icon when ready to 'shoot'.
 
-- _Rock_: Beats scissors. Loses to paper.
-- _Paper_: Beats rock. Loses to scissors.
-- _Scissors_: Beats paper. Loses to rock.
+- **Rock**: Beats scissors. Loses to paper.
+- **Paper**: Beats rock. Loses to scissors.
+- **Scissors**: Beats paper. Loses to rock.
 
 ## Documentation
 
