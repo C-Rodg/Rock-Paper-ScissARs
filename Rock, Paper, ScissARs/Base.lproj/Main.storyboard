@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xPv-Xk-BEP">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Ikaros-Light.otf">
+            <string>Ikaros-Light</string>
+        </array>
+        <array key="Ikaros-Regular.otf">
+            <string>Ikaros-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Settings View Controller-->
+        <scene sceneID="ZxQ-lH-Del">
+            <objects>
+                <viewController id="oYH-us-asr" customClass="SettingsViewController" customModule="Rock__Paper__ScissARs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PrZ-bG-1YA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q3G-Og-bhC" userLabel="ContainerView">
+                                <rect key="frame" x="12.666666666666657" y="44" width="350" height="665"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpF-iA-1Ec">
+                                        <rect key="frame" x="0.0" y="25" width="350" height="25"/>
+                                        <fontDescription key="fontDescription" name="Ikaros-Regular" family="Ikaros Sans" pointSize="25"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Npw-MT-7Ah">
+                                        <rect key="frame" x="0.0" y="60" width="350" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Ikaros-Light" family="Ikaros Sans" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
+                                    </textField>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7Ga-BL-Hev">
+                                        <rect key="frame" x="0.0" y="160" width="350" height="29"/>
+                                        <segments>
+                                            <segment title="1"/>
+                                            <segment title="3"/>
+                                            <segment title="5"/>
+                                            <segment title="7"/>
+                                        </segments>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="onBestOfGamesChange:" destination="oYH-us-asr" eventType="valueChanged" id="4nz-1I-0xh"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best of:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drs-dw-ael">
+                                        <rect key="frame" x="0.0" y="125" width="350" height="25"/>
+                                        <fontDescription key="fontDescription" name="Ikaros-Regular" family="Ikaros Sans" pointSize="25"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stats:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TkF-nQ-eH0">
+                                        <rect key="frame" x="0.0" y="218" width="350" height="25"/>
+                                        <fontDescription key="fontDescription" name="Ikaros-Regular" family="Ikaros Sans" pointSize="25"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0b8-O8-3EI" userLabel="StatsContainer">
+                                        <rect key="frame" x="0.0" y="253" width="350" height="170"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rock:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Cc-cB-Bxb">
+                                                <rect key="frame" x="5" y="0.0" width="150" height="17"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="sH1-PE-tM5"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Ikaros-Regular" family="Ikaros Sans" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scissors:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4OS-ET-iTj">
+                                                <rect key="frame" x="5" y="54" width="150" height="17"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="GIK-gK-0zd"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Ikaros-Regular" family="Ikaros Sans" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paper:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAR-dc-ibY">
+                                                <rect key="frame" x="5" y="27" width="150" height="17"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="u3A-JV-i9M"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Ikaros-Regular" family="Ikaros Sans" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIO-86-dOL">
+                                                <rect key="frame" x="155" y="0.0" width="195" height="17"/>
+                                                <fontDescription key="fontDescription" name="Ikaros-Regular" family="Ikaros Sans" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nan-8Q-awu">
+                                                <rect key="frame" x="155" y="27" width="195" height="17"/>
+                                                <fontDescription key="fontDescription" name="Ikaros-Regular" family="Ikaros Sans" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAv-dC-MS0">
+                                                <rect key="frame" x="155" y="54" width="195" height="17"/>
+                                                <fontDescription key="fontDescription" name="Ikaros-Regular" family="Ikaros Sans" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wins:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzw-dF-fTc">
+                                                <rect key="frame" x="5" y="91" width="150" height="19"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="A1x-RF-BFi"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Ikaros-Regular" family="Ikaros Sans" pointSize="19"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Losses:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44S-yM-UTz">
+                                                <rect key="frame" x="5" y="120" width="150" height="19"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="ly6-HG-vOJ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Ikaros-Regular" family="Ikaros Sans" pointSize="19"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 wins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KNo-wb-PKC">
+                                                <rect key="frame" x="155" y="91" width="195" height="19"/>
+                                                <fontDescription key="fontDescription" name="Ikaros-Regular" family="Ikaros Sans" pointSize="19"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 losses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9J-Ae-AZU">
+                                                <rect key="frame" x="155" y="120" width="195" height="19"/>
+                                                <fontDescription key="fontDescription" name="Ikaros-Regular" family="Ikaros Sans" pointSize="19"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="gIO-86-dOL" secondAttribute="trailing" id="3ZZ-9j-AVj"/>
+                                            <constraint firstAttribute="trailing" secondItem="nan-8Q-awu" secondAttribute="trailing" id="7x6-rP-HRy"/>
+                                            <constraint firstItem="5Cc-cB-Bxb" firstAttribute="top" secondItem="0b8-O8-3EI" secondAttribute="top" id="Dms-3g-P6x"/>
+                                            <constraint firstItem="vzw-dF-fTc" firstAttribute="top" secondItem="4OS-ET-iTj" secondAttribute="bottom" constant="20" id="F8q-rX-FoF">
+                                                <variation key="heightClass=compact" constant="5"/>
+                                            </constraint>
+                                            <constraint firstItem="gIO-86-dOL" firstAttribute="centerY" secondItem="5Cc-cB-Bxb" secondAttribute="centerY" id="GMR-Ow-Y8w"/>
+                                            <constraint firstAttribute="trailing" secondItem="R9J-Ae-AZU" secondAttribute="trailing" id="HRL-Sm-usb"/>
+                                            <constraint firstItem="44S-yM-UTz" firstAttribute="top" secondItem="vzw-dF-fTc" secondAttribute="bottom" constant="10" id="Hb1-g5-EnL">
+                                                <variation key="heightClass=compact" constant="5"/>
+                                            </constraint>
+                                            <constraint firstAttribute="trailing" secondItem="KNo-wb-PKC" secondAttribute="trailing" id="JK6-Kf-aoF"/>
+                                            <constraint firstItem="xAv-dC-MS0" firstAttribute="centerY" secondItem="4OS-ET-iTj" secondAttribute="centerY" id="JUa-1A-wQz"/>
+                                            <constraint firstItem="R9J-Ae-AZU" firstAttribute="leading" secondItem="44S-yM-UTz" secondAttribute="trailing" id="LDb-Hk-k2c"/>
+                                            <constraint firstItem="vzw-dF-fTc" firstAttribute="leading" secondItem="0b8-O8-3EI" secondAttribute="leading" constant="5" id="LcC-C8-1aT"/>
+                                            <constraint firstAttribute="height" constant="170" id="MKa-8J-OWr"/>
+                                            <constraint firstItem="5Cc-cB-Bxb" firstAttribute="leading" secondItem="0b8-O8-3EI" secondAttribute="leading" constant="5" id="MfY-W5-mkA"/>
+                                            <constraint firstItem="wAR-dc-ibY" firstAttribute="leading" secondItem="0b8-O8-3EI" secondAttribute="leading" constant="5" id="NCj-Wh-nXY"/>
+                                            <constraint firstItem="R9J-Ae-AZU" firstAttribute="centerY" secondItem="44S-yM-UTz" secondAttribute="centerY" id="QQn-Cr-rSE"/>
+                                            <constraint firstItem="wAR-dc-ibY" firstAttribute="top" secondItem="5Cc-cB-Bxb" secondAttribute="bottom" constant="10" id="RZs-mJ-SHd">
+                                                <variation key="heightClass=compact" constant="5"/>
+                                            </constraint>
+                                            <constraint firstItem="4OS-ET-iTj" firstAttribute="top" secondItem="wAR-dc-ibY" secondAttribute="bottom" constant="10" id="Tb2-pR-7Ts">
+                                                <variation key="heightClass=compact" constant="5"/>
+                                            </constraint>
+                                            <constraint firstAttribute="trailing" secondItem="xAv-dC-MS0" secondAttribute="trailing" id="XsJ-8O-QoU"/>
+                                            <constraint firstItem="4OS-ET-iTj" firstAttribute="leading" secondItem="0b8-O8-3EI" secondAttribute="leading" constant="5" id="Ylt-MX-hfw"/>
+                                            <constraint firstItem="KNo-wb-PKC" firstAttribute="centerY" secondItem="vzw-dF-fTc" secondAttribute="centerY" id="eCT-eF-gm4"/>
+                                            <constraint firstItem="gIO-86-dOL" firstAttribute="leading" secondItem="5Cc-cB-Bxb" secondAttribute="trailing" id="eIS-XF-Af4"/>
+                                            <constraint firstItem="nan-8Q-awu" firstAttribute="leading" secondItem="wAR-dc-ibY" secondAttribute="trailing" id="l9t-uA-0nN"/>
+                                            <constraint firstItem="KNo-wb-PKC" firstAttribute="leading" secondItem="vzw-dF-fTc" secondAttribute="trailing" id="rFs-Xo-YBi"/>
+                                            <constraint firstItem="nan-8Q-awu" firstAttribute="centerY" secondItem="wAR-dc-ibY" secondAttribute="centerY" id="reZ-9J-Z9x"/>
+                                            <constraint firstItem="44S-yM-UTz" firstAttribute="leading" secondItem="0b8-O8-3EI" secondAttribute="leading" constant="5" id="v1O-QS-IMX"/>
+                                            <constraint firstItem="xAv-dC-MS0" firstAttribute="leading" secondItem="4OS-ET-iTj" secondAttribute="trailing" id="wrO-v0-2yr"/>
+                                        </constraints>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b96-j0-qvQ" userLabel="CameraStatusView">
+                                        <rect key="frame" x="0.0" y="423" width="350" height="180"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera Status:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6v-3c-zJe">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="25"/>
+                                                <fontDescription key="fontDescription" name="Ikaros-Regular" family="Ikaros Sans" pointSize="25"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avP-z3-P7q">
+                                                <rect key="frame" x="5" y="35" width="340" height="76"/>
+                                                <string key="text">This game is much better with access to your devices camera. Please head to Settings &gt; Privacy &gt; Camera to enable augmented reality!</string>
+                                                <fontDescription key="fontDescription" name="Ikaros-Regular" family="Ikaros Sans" pointSize="19"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="T6v-3c-zJe" firstAttribute="leading" secondItem="b96-j0-qvQ" secondAttribute="leading" id="0RP-2c-oxd"/>
+                                            <constraint firstAttribute="trailing" secondItem="T6v-3c-zJe" secondAttribute="trailing" id="8B9-bk-BHo"/>
+                                            <constraint firstItem="avP-z3-P7q" firstAttribute="top" secondItem="T6v-3c-zJe" secondAttribute="bottom" constant="10" id="905-Hh-PWI"/>
+                                            <constraint firstAttribute="height" constant="180" id="MsJ-Kh-BHK"/>
+                                            <constraint firstAttribute="trailing" secondItem="avP-z3-P7q" secondAttribute="trailing" constant="5" id="Qzt-mj-d8q"/>
+                                            <constraint firstItem="T6v-3c-zJe" firstAttribute="top" secondItem="b96-j0-qvQ" secondAttribute="top" id="WZl-bz-sGl"/>
+                                            <constraint firstItem="avP-z3-P7q" firstAttribute="leading" secondItem="b96-j0-qvQ" secondAttribute="leading" constant="5" id="w0z-5f-8SF"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="7Ga-BL-Hev" secondAttribute="trailing" id="1JY-tQ-3dN"/>
+                                    <constraint firstItem="Npw-MT-7Ah" firstAttribute="leading" secondItem="Q3G-Og-bhC" secondAttribute="leading" id="2if-NC-PEc"/>
+                                    <constraint firstItem="drs-dw-ael" firstAttribute="top" secondItem="Npw-MT-7Ah" secondAttribute="bottom" constant="35" id="8wf-oW-aIe">
+                                        <variation key="heightClass=compact" constant="5"/>
+                                    </constraint>
+                                    <constraint firstItem="7Ga-BL-Hev" firstAttribute="leading" secondItem="Q3G-Og-bhC" secondAttribute="leading" id="9gT-gM-bQW"/>
+                                    <constraint firstItem="b96-j0-qvQ" firstAttribute="top" secondItem="0b8-O8-3EI" secondAttribute="bottom" id="AqW-UM-LQs"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="350" id="CiZ-CW-ReX"/>
+                                    <constraint firstItem="0b8-O8-3EI" firstAttribute="top" secondItem="TkF-nQ-eH0" secondAttribute="bottom" constant="10" id="DSt-ze-Nw9">
+                                        <variation key="heightClass=compact" constant="5"/>
+                                    </constraint>
+                                    <constraint firstAttribute="trailing" secondItem="0b8-O8-3EI" secondAttribute="trailing" id="ENZ-AN-jGr"/>
+                                    <constraint firstItem="TkF-nQ-eH0" firstAttribute="leading" secondItem="Q3G-Og-bhC" secondAttribute="leading" id="FVp-2M-Wy5"/>
+                                    <constraint firstItem="b96-j0-qvQ" firstAttribute="leading" secondItem="Q3G-Og-bhC" secondAttribute="leading" id="IuY-VF-7Qe"/>
+                                    <constraint firstItem="rpF-iA-1Ec" firstAttribute="top" secondItem="Q3G-Og-bhC" secondAttribute="top" constant="25" id="Kv6-MA-XyA">
+                                        <variation key="heightClass=compact" constant="2"/>
+                                    </constraint>
+                                    <constraint firstAttribute="trailing" secondItem="b96-j0-qvQ" secondAttribute="trailing" id="MGL-GH-iGK"/>
+                                    <constraint firstAttribute="trailing" secondItem="TkF-nQ-eH0" secondAttribute="trailing" id="NAH-GB-wpo"/>
+                                    <constraint firstAttribute="trailing" secondItem="Npw-MT-7Ah" secondAttribute="trailing" id="OJk-b6-Pgn"/>
+                                    <constraint firstAttribute="trailing" secondItem="rpF-iA-1Ec" secondAttribute="trailing" id="OYl-W0-6v1"/>
+                                    <constraint firstItem="drs-dw-ael" firstAttribute="leading" secondItem="Q3G-Og-bhC" secondAttribute="leading" id="UXi-W9-1Wj"/>
+                                    <constraint firstItem="0b8-O8-3EI" firstAttribute="leading" secondItem="Q3G-Og-bhC" secondAttribute="leading" id="bNK-bm-4W4"/>
+                                    <constraint firstItem="7Ga-BL-Hev" firstAttribute="top" secondItem="drs-dw-ael" secondAttribute="bottom" constant="10" id="ezq-he-Fhr">
+                                        <variation key="heightClass=compact" constant="5"/>
+                                    </constraint>
+                                    <constraint firstAttribute="trailing" secondItem="drs-dw-ael" secondAttribute="trailing" id="hdc-PN-nHj"/>
+                                    <constraint firstItem="TkF-nQ-eH0" firstAttribute="top" secondItem="7Ga-BL-Hev" secondAttribute="bottom" constant="30" id="noB-Fo-jA4">
+                                        <variation key="heightClass=compact" constant="10"/>
+                                    </constraint>
+                                    <constraint firstItem="rpF-iA-1Ec" firstAttribute="leading" secondItem="Q3G-Og-bhC" secondAttribute="leading" id="qcJ-pJ-BWv"/>
+                                    <constraint firstItem="Npw-MT-7Ah" firstAttribute="top" secondItem="rpF-iA-1Ec" secondAttribute="bottom" constant="10" id="wnT-ci-CnC">
+                                        <variation key="heightClass=compact" constant="5"/>
+                                    </constraint>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.023529411764705882" green="0.062745098039215685" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Q3G-Og-bhC" firstAttribute="leading" secondItem="4iS-Ne-IqB" secondAttribute="leading" priority="750" constant="10" id="Ob4-i0-LdH"/>
+                            <constraint firstItem="Q3G-Og-bhC" firstAttribute="centerX" secondItem="4iS-Ne-IqB" secondAttribute="centerX" id="Scw-2D-vch"/>
+                            <constraint firstItem="Q3G-Og-bhC" firstAttribute="trailing" secondItem="4iS-Ne-IqB" secondAttribute="trailing" priority="750" constant="10" id="Veg-QX-778"/>
+                            <constraint firstItem="4iS-Ne-IqB" firstAttribute="bottom" secondItem="Q3G-Og-bhC" secondAttribute="bottom" constant="20" id="ksf-Sj-eDs"/>
+                            <constraint firstItem="Q3G-Og-bhC" firstAttribute="top" secondItem="4iS-Ne-IqB" secondAttribute="top" id="vkf-AU-kFF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4iS-Ne-IqB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="settings_icon" id="hYe-N7-h1G"/>
+                    <connections>
+                        <outlet property="bestOfSegment" destination="7Ga-BL-Hev" id="SR0-90-JgU"/>
+                        <outlet property="cameraStatusViewContainer" destination="b96-j0-qvQ" id="EQg-FW-wjQ"/>
+                        <outlet property="labelStatsLosses" destination="R9J-Ae-AZU" id="gpr-FH-KdN"/>
+                        <outlet property="labelStatsPaper" destination="nan-8Q-awu" id="SGQ-Lp-1pU"/>
+                        <outlet property="labelStatsRock" destination="gIO-86-dOL" id="dGs-GK-yXo"/>
+                        <outlet property="labelStatsScissors" destination="xAv-dC-MS0" id="gjB-Gy-xko"/>
+                        <outlet property="labelStatsWins" destination="KNo-wb-PKC" id="Lfx-el-yaf"/>
+                        <outlet property="usernameTextField" destination="Npw-MT-7Ah" id="81L-sM-dgs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2QG-2S-VoS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.60000000000002" y="-349.50738916256159"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="eM4-iN-mPA">
+            <objects>
+                <viewController id="cHo-Cl-lzD" customClass="GameViewController" customModule="Rock__Paper__ScissARs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K3t-0i-MPB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="l6O-lw-b8n">
+                                <rect key="frame" x="10" y="64" width="355" height="308.33333333333331"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rock, Paper, ScissARs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLs-BE-8FM">
+                                <rect key="frame" x="10" y="372.33333333333331" width="355" height="34"/>
+                                <fontDescription key="fontDescription" name="Ikaros-Regular" family="Ikaros Sans" pointSize="34"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0K-gn-Jw8" customClass="BorderedButton" customModule="Rock__Paper__ScissARs" customModuleProvider="target">
+                                <rect key="frame" x="20" y="466.33333333333331" width="335" height="64.999999999999943"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="Zt1-zQ-BSN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ikaros-Light" family="Ikaros Sans" pointSize="30"/>
+                                <state key="normal" title="PLAY VS. CPU">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="navigateToPlayComputer:" destination="cHo-Cl-lzD" eventType="touchUpInside" id="Zyr-wx-0Vf"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MO4-7T-whb" customClass="BorderedButton" customModule="Rock__Paper__ScissARs" customModuleProvider="target">
+                                <rect key="frame" x="20" y="561.33333333333337" width="335" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="rYR-py-fqG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ikaros-Light" family="Ikaros Sans" pointSize="30"/>
+                                <state key="normal" title="PLAY VS. HUMAN">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="navigateToPlayOtherDevice:" destination="cHo-Cl-lzD" eventType="touchUpInside" id="mYY-nl-Lne"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVS-CV-I0l">
+                                <rect key="frame" x="5" y="49" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="HGJ-cF-79B"/>
+                                    <constraint firstAttribute="width" constant="36" id="srB-wE-wSc"/>
+                                </constraints>
+                                <state key="normal" image="questionBubble"/>
+                                <connections>
+                                    <action selector="navigateToHowToPlay:" destination="cHo-Cl-lzD" eventType="touchUpInside" id="JOB-1j-vcB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.023529411764705882" green="0.062745098039215685" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qVS-CV-I0l" firstAttribute="leading" secondItem="JlK-nZ-E53" secondAttribute="leading" constant="5" id="2uc-9f-Dlt"/>
+                            <constraint firstItem="l6O-lw-b8n" firstAttribute="leading" secondItem="K3t-0i-MPB" secondAttribute="leading" constant="10" id="42L-0X-FKR"/>
+                            <constraint firstAttribute="trailing" secondItem="l6O-lw-b8n" secondAttribute="trailing" constant="10" id="4H9-so-KBP"/>
+                            <constraint firstItem="qVS-CV-I0l" firstAttribute="top" secondItem="JlK-nZ-E53" secondAttribute="top" constant="5" id="AaF-kD-N5b"/>
+                            <constraint firstItem="p0K-gn-Jw8" firstAttribute="top" secondItem="tLs-BE-8FM" secondAttribute="bottom" constant="60" id="Aly-IR-vv9"/>
+                            <constraint firstItem="l6O-lw-b8n" firstAttribute="top" secondItem="JlK-nZ-E53" secondAttribute="top" constant="20" id="DYx-Ad-6l7"/>
+                            <constraint firstItem="l6O-lw-b8n" firstAttribute="centerX" secondItem="JlK-nZ-E53" secondAttribute="centerX" id="MPd-4N-sab"/>
+                            <constraint firstItem="MO4-7T-whb" firstAttribute="top" secondItem="p0K-gn-Jw8" secondAttribute="bottom" constant="30" id="SCF-7y-A5D"/>
+                            <constraint firstItem="MO4-7T-whb" firstAttribute="leading" secondItem="JlK-nZ-E53" secondAttribute="leading" constant="20" id="Sma-6i-eQi"/>
+                            <constraint firstItem="tLs-BE-8FM" firstAttribute="trailing" secondItem="JlK-nZ-E53" secondAttribute="trailing" constant="-10" id="WSQ-RZ-3Io"/>
+                            <constraint firstItem="p0K-gn-Jw8" firstAttribute="leading" secondItem="JlK-nZ-E53" secondAttribute="leading" constant="20" id="XPG-zL-nAk"/>
+                            <constraint firstItem="tLs-BE-8FM" firstAttribute="leading" secondItem="JlK-nZ-E53" secondAttribute="leading" constant="10" id="pAp-cq-fn6"/>
+                            <constraint firstItem="JlK-nZ-E53" firstAttribute="trailing" secondItem="p0K-gn-Jw8" secondAttribute="trailing" constant="20" id="qqP-e2-LkA"/>
+                            <constraint firstItem="l6O-lw-b8n" firstAttribute="height" secondItem="JlK-nZ-E53" secondAttribute="height" multiplier="0.45" id="vdC-oc-hv2"/>
+                            <constraint firstItem="tLs-BE-8FM" firstAttribute="top" secondItem="l6O-lw-b8n" secondAttribute="bottom" id="wda-4K-6pW"/>
+                            <constraint firstItem="JlK-nZ-E53" firstAttribute="trailing" secondItem="MO4-7T-whb" secondAttribute="trailing" constant="20" id="ytx-HE-QjG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JlK-nZ-E53"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="videogame_icon" id="Mch-sM-fNh"/>
+                    <connections>
+                        <segue destination="f2J-Pw-ehx" kind="presentation" identifier="navigateToPlayComputer" id="XqA-KI-rAy"/>
+                        <segue destination="JsB-sS-RFM" kind="presentation" identifier="navigateToPlayOnline" id="LLD-5t-9Kd"/>
+                        <segue destination="YdF-gH-j6r" kind="presentation" identifier="navigateToHowToPlay" id="aaL-QE-rMh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o6e-MK-Zac" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-300" y="-342.39130434782612"/>
+        </scene>
+        <!--How To Play View Controller-->
+        <scene sceneID="Xf4-QE-JiE">
+            <objects>
+                <viewController id="YdF-gH-j6r" customClass="HowToPlayViewController" customModule="Rock__Paper__ScissARs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Eq-GI-qxp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5u-iL-nO5">
+                                <rect key="frame" x="0.0" y="44" width="65" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="X61-zM-3D4"/>
+                                    <constraint firstAttribute="width" constant="65" id="li5-dR-43K"/>
+                                </constraints>
+                                <state key="normal" image="exit_icon"/>
+                                <connections>
+                                    <action selector="exitButtonTapped:" destination="YdF-gH-j6r" eventType="touchUpInside" id="0iL-Jp-HfE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How To Play" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtQ-rk-oVo">
+                                <rect key="frame" x="10" y="117" width="355" height="34"/>
+                                <fontDescription key="fontDescription" name="Ikaros-Regular" family="Ikaros Sans" pointSize="34"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kY5-DF-Gvv">
+                                <rect key="frame" x="10" y="161" width="355" height="122"/>
+                                <string key="text">Rock, Paper, ScissARs is an augmented reality roshambo game.  After beginning a game, just display your hand position to the camera on your device and tap on the overlay icon when ready to 'shoot'.  From there, the rules of the game are simple:</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" estimatedRowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TGl-xD-weM">
+                                <rect key="frame" x="0.0" y="306" width="375" height="472"/>
+                                <color key="backgroundColor" red="0.023529411764705882" green="0.062745098039215685" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="instructionCell" rowHeight="150" id="zfl-qA-Skg" customClass="InstructionCell" customModule="Rock__Paper__ScissARs" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zfl-qA-Skg" id="cY0-w8-PJg">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxl-QR-Hey">
+                                                    <rect key="frame" x="0.0" y="102" width="375" height="17"/>
+                                                    <fontDescription key="fontDescription" name="Ikaros-Regular" family="Ikaros Sans" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lgJ-Sa-kNx">
+                                                    <rect key="frame" x="163.66666666666666" y="11" width="48" height="48"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="48" id="ASg-1i-1uY"/>
+                                                        <constraint firstAttribute="width" constant="48" id="xek-rx-V87"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TITLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yl7-6a-GOJ">
+                                                    <rect key="frame" x="0.0" y="73" width="375" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Ikaros-Regular" family="Ikaros Sans" pointSize="21"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.023529411764705882" green="0.062745098039215685" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="lgJ-Sa-kNx" firstAttribute="top" secondItem="cY0-w8-PJg" secondAttribute="topMargin" id="E7m-th-jvy"/>
+                                                <constraint firstItem="lgJ-Sa-kNx" firstAttribute="centerX" secondItem="cY0-w8-PJg" secondAttribute="centerX" id="Qzu-DF-MBg"/>
+                                                <constraint firstAttribute="trailing" secondItem="yxl-QR-Hey" secondAttribute="trailing" id="TB2-yd-ZgL"/>
+                                                <constraint firstAttribute="trailing" secondItem="Yl7-6a-GOJ" secondAttribute="trailing" id="b6V-9W-ITE"/>
+                                                <constraint firstItem="yxl-QR-Hey" firstAttribute="top" secondItem="Yl7-6a-GOJ" secondAttribute="bottom" constant="8" id="dZw-jo-87i"/>
+                                                <constraint firstItem="Yl7-6a-GOJ" firstAttribute="top" secondItem="lgJ-Sa-kNx" secondAttribute="bottom" constant="14" id="jCb-gN-c7h"/>
+                                                <constraint firstItem="Yl7-6a-GOJ" firstAttribute="leading" secondItem="cY0-w8-PJg" secondAttribute="leading" id="oiW-g5-F4L"/>
+                                                <constraint firstItem="yxl-QR-Hey" firstAttribute="leading" secondItem="cY0-w8-PJg" secondAttribute="leading" id="xCt-qo-nbL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="icon" destination="lgJ-Sa-kNx" id="Cqk-bD-zH9"/>
+                                            <outlet property="instructions" destination="yxl-QR-Hey" id="BLt-LC-jIo"/>
+                                            <outlet property="title" destination="Yl7-6a-GOJ" id="ug2-MK-dq3"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="YdF-gH-j6r" id="R87-0t-0R3"/>
+                                    <outlet property="delegate" destination="YdF-gH-j6r" id="Q2I-WR-y5Z"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.023529411764705882" green="0.062745098039215685" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TGl-xD-weM" firstAttribute="leading" secondItem="0nf-Cr-uSc" secondAttribute="leading" id="1kA-h7-e5D"/>
+                            <constraint firstItem="0nf-Cr-uSc" firstAttribute="bottom" secondItem="TGl-xD-weM" secondAttribute="bottom" id="3mQ-ju-m5I"/>
+                            <constraint firstItem="HtQ-rk-oVo" firstAttribute="top" secondItem="W5u-iL-nO5" secondAttribute="bottom" constant="8" id="Db9-Ra-9sE"/>
+                            <constraint firstItem="HtQ-rk-oVo" firstAttribute="leading" secondItem="0nf-Cr-uSc" secondAttribute="leading" constant="10" id="Gof-N0-18g"/>
+                            <constraint firstItem="kY5-DF-Gvv" firstAttribute="trailing" secondItem="0nf-Cr-uSc" secondAttribute="trailing" constant="-10" id="GrQ-UE-doM"/>
+                            <constraint firstItem="kY5-DF-Gvv" firstAttribute="leading" secondItem="0nf-Cr-uSc" secondAttribute="leading" constant="10" id="J9q-41-OtG"/>
+                            <constraint firstItem="W5u-iL-nO5" firstAttribute="leading" secondItem="0nf-Cr-uSc" secondAttribute="leading" id="KB5-sa-JCa"/>
+                            <constraint firstItem="TGl-xD-weM" firstAttribute="top" secondItem="kY5-DF-Gvv" secondAttribute="bottom" constant="23" id="Npp-87-0Dh"/>
+                            <constraint firstItem="TGl-xD-weM" firstAttribute="trailing" secondItem="0nf-Cr-uSc" secondAttribute="trailing" id="b5d-1H-YAr"/>
+                            <constraint firstItem="HtQ-rk-oVo" firstAttribute="trailing" secondItem="0nf-Cr-uSc" secondAttribute="trailing" constant="-10" id="dLW-Bo-GXE"/>
+                            <constraint firstItem="kY5-DF-Gvv" firstAttribute="top" secondItem="HtQ-rk-oVo" secondAttribute="bottom" constant="10" id="l6h-Gi-rE2"/>
+                            <constraint firstItem="W5u-iL-nO5" firstAttribute="top" secondItem="0nf-Cr-uSc" secondAttribute="top" id="rif-4H-uEj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0nf-Cr-uSc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qN2-29-OIi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1605.5999999999999" y="522.41379310344826"/>
+        </scene>
+        <!--Play Computer View Controller-->
+        <scene sceneID="O4t-x4-WsX">
+            <objects>
+                <viewController id="f2J-Pw-ehx" customClass="PlayComputerViewController" customModule="Rock__Paper__ScissARs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UGP-dp-0bK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X8w-mc-RaY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="f0T-Ib-hD0" customClass="OverlayActionButton" customModule="Rock__Paper__ScissARs" customModuleProvider="target">
+                                <rect key="frame" x="27.666666666666657" y="251" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="Cew-W6-T7G"/>
+                                    <constraint firstAttribute="width" constant="320" id="KBA-iD-qn2"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="60" minY="60" maxX="60" maxY="60"/>
+                                <state key="normal" image="rock"/>
+                                <connections>
+                                    <action selector="shootButtonPressed:" destination="f2J-Pw-ehx" eventType="touchUpInside" id="9sv-7x-BDo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOw-eI-WLV" userLabel="More Button" customClass="FloatingActionButton" customModule="Rock__Paper__ScissARs" customModuleProvider="target">
+                                <rect key="frame" x="295" y="44" width="65" height="65"/>
+                                <color key="backgroundColor" red="0.023529411760000001" green="0.062745098040000002" blue="0.074509803920000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="8xC-cY-aoO"/>
+                                    <constraint firstAttribute="width" constant="65" id="NwW-6F-yyg"/>
+                                </constraints>
+                                <state key="normal" image="add_icon"/>
+                                <connections>
+                                    <action selector="manualSelectionTogglePressed:" destination="f2J-Pw-ehx" eventType="touchUpInside" id="lpI-xE-3x8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ma-l3-WaQ" customClass="FloatingActionButton" customModule="Rock__Paper__ScissARs" customModuleProvider="target">
+                                <rect key="frame" x="15" y="44" width="65" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="PTH-EK-vLg"/>
+                                    <constraint firstAttribute="width" constant="65" id="x43-IC-FB3"/>
+                                </constraints>
+                                <state key="normal" image="exit_icon"/>
+                                <connections>
+                                    <action selector="exitGamePressed:" destination="f2J-Pw-ehx" eventType="touchUpInside" id="OD5-fz-0Qh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRp-MJ-dJM" customClass="FloatingActionButton" customModule="Rock__Paper__ScissARs" customModuleProvider="target">
+                                <rect key="frame" x="16" y="710" width="65" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="9jk-ip-DI8"/>
+                                    <constraint firstAttribute="height" constant="65" id="Kyz-Tb-ksr"/>
+                                </constraints>
+                                <state key="normal" image="reset_icon"/>
+                                <connections>
+                                    <action selector="resetGamePressed:" destination="f2J-Pw-ehx" eventType="touchUpInside" id="IYi-eM-P7h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojG-p9-6Ta" customClass="FloatingActionButton" customModule="Rock__Paper__ScissARs" customModuleProvider="target">
+                                <rect key="frame" x="305.66666666666669" y="129" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="ZzE-Fc-qNJ"/>
+                                    <constraint firstAttribute="height" constant="45" id="vJL-Id-bd9"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" image="icon_rock"/>
+                                <connections>
+                                    <action selector="manualSelectionRockPressed:" destination="f2J-Pw-ehx" eventType="touchUpInside" id="lJx-eR-TUj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lrd-si-BBQ" customClass="FloatingActionButton" customModule="Rock__Paper__ScissARs" customModuleProvider="target">
+                                <rect key="frame" x="305" y="239" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="34u-bX-Q2W"/>
+                                    <constraint firstAttribute="width" constant="45" id="qLA-4C-EnW"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" image="icon_scissors"/>
+                                <connections>
+                                    <action selector="manualSelectionScissorsPressed:" destination="f2J-Pw-ehx" eventType="touchUpInside" id="YNR-fx-teG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gw7-1R-xZl" customClass="FloatingActionButton" customModule="Rock__Paper__ScissARs" customModuleProvider="target">
+                                <rect key="frame" x="305.66666666666669" y="184" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="hDN-ES-s8A"/>
+                                    <constraint firstAttribute="height" constant="45" id="ivp-4j-zeg"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" image="icon_paper"/>
+                                <connections>
+                                    <action selector="manualSelectionPaperPressed:" destination="f2J-Pw-ehx" eventType="touchUpInside" id="7gl-aA-9Fo"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k9a-Nv-TFy" userLabel="Score Update Container">
+                                <rect key="frame" x="12.666666666666657" y="173.66666666666663" width="350" height="475"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eKK-ow-0AZ" userLabel="Their Score Container" customClass="ScoreTileLeft" customModule="Rock__Paper__ScissARs" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="110"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="They Played :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8e7-sa-I2m">
+                                                <rect key="frame" x="15" y="11" width="306" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Ikaros-Light" family="Ikaros Sans" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="P2SCORE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4p-Sa-JPP">
+                                                <rect key="frame" x="15" y="35" width="306" height="72"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Ikaros-Regular" family="Ikaros Sans" pointSize="60"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="110" id="tcw-2E-LMB"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Elb-VG-JgT" userLabel="Your Score Container" customClass="ScoreTileRight" customModule="Rock__Paper__ScissARs" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="365" width="350" height="110"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You Played :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yT1-dR-fsQ">
+                                                <rect key="frame" x="15" y="11" width="306" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Ikaros-Light" family="Ikaros Sans" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MYCHOICE" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqc-Qa-Mja">
+                                                <rect key="frame" x="15" y="35" width="306" height="72"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Ikaros-Regular" family="Ikaros Sans" pointSize="60"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="110" id="7eF-cT-eJb"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JAD-wa-q3H" userLabel="Results Container" customClass="ResultsTile" customModule="Rock__Paper__ScissARs" customModuleProvider="target">
+                                        <rect key="frame" x="72.333333333333314" y="135.00000000000003" width="205" height="204.99999999999997"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RESULT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KlC-XZ-yIs">
+                                                <rect key="frame" x="5" y="45" width="195" height="24.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="Ikaros-Light" family="Ikaros Sans" pointSize="21"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0-0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGW-fv-rgu">
+                                                <rect key="frame" x="5" y="77.333333333333314" width="195" height="66"/>
+                                                <fontDescription key="fontDescription" name="Ikaros-Regular" family="Ikaros Sans" pointSize="66"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PlP-gB-wxc">
+                                                <rect key="frame" x="5" y="148.33333333333331" width="195" height="15.666666666666657"/>
+                                                <fontDescription key="fontDescription" name="Ikaros-Light" family="Ikaros Sans" pointSize="13"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="KlC-XZ-yIs" secondAttribute="trailing" constant="5" id="2w7-uh-dBi"/>
+                                            <constraint firstItem="RGW-fv-rgu" firstAttribute="top" secondItem="KlC-XZ-yIs" secondAttribute="bottom" constant="8" id="3Sd-3z-D5A"/>
+                                            <constraint firstAttribute="trailing" secondItem="RGW-fv-rgu" secondAttribute="trailing" constant="5" id="Fdt-ah-1G3"/>
+                                            <constraint firstItem="PlP-gB-wxc" firstAttribute="top" secondItem="RGW-fv-rgu" secondAttribute="bottom" constant="5" id="I77-Pc-SV7"/>
+                                            <constraint firstItem="RGW-fv-rgu" firstAttribute="leading" secondItem="JAD-wa-q3H" secondAttribute="leading" constant="5" id="U9E-4v-4HB"/>
+                                            <constraint firstItem="KlC-XZ-yIs" firstAttribute="leading" secondItem="JAD-wa-q3H" secondAttribute="leading" constant="5" id="goD-Fr-xkP"/>
+                                            <constraint firstAttribute="trailing" secondItem="PlP-gB-wxc" secondAttribute="trailing" constant="5" id="qV6-c6-f1N"/>
+                                            <constraint firstItem="RGW-fv-rgu" firstAttribute="centerY" secondItem="JAD-wa-q3H" secondAttribute="centerY" constant="8" id="qeU-OK-OqY"/>
+                                            <constraint firstItem="PlP-gB-wxc" firstAttribute="leading" secondItem="JAD-wa-q3H" secondAttribute="leading" constant="5" id="rRw-GX-BhY"/>
+                                            <constraint firstAttribute="width" secondItem="JAD-wa-q3H" secondAttribute="height" multiplier="1:1" id="sFn-vS-d8c"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Elb-VG-JgT" secondAttribute="bottom" id="2pk-at-AUC"/>
+                                    <constraint firstAttribute="trailing" secondItem="Elb-VG-JgT" secondAttribute="trailing" id="Fs7-WK-IMF"/>
+                                    <constraint firstItem="eKK-ow-0AZ" firstAttribute="top" secondItem="k9a-Nv-TFy" secondAttribute="top" id="JnU-QV-qSL"/>
+                                    <constraint firstItem="Elb-VG-JgT" firstAttribute="leading" secondItem="k9a-Nv-TFy" secondAttribute="leading" id="S9m-Vc-1Dz"/>
+                                    <constraint firstItem="JAD-wa-q3H" firstAttribute="top" secondItem="eKK-ow-0AZ" secondAttribute="bottom" constant="25" id="UL3-Qj-vWu"/>
+                                    <constraint firstItem="JAD-wa-q3H" firstAttribute="centerX" secondItem="k9a-Nv-TFy" secondAttribute="centerX" id="Ub9-RC-LtT"/>
+                                    <constraint firstAttribute="trailing" secondItem="eKK-ow-0AZ" secondAttribute="trailing" id="acX-IG-2Pr"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="350" id="eA8-ah-GXJ"/>
+                                    <constraint firstItem="Elb-VG-JgT" firstAttribute="top" secondItem="JAD-wa-q3H" secondAttribute="bottom" constant="25" id="g6t-Gq-uHv"/>
+                                    <constraint firstAttribute="height" constant="475" id="vUs-aC-8aj"/>
+                                    <constraint firstItem="eKK-ow-0AZ" firstAttribute="leading" secondItem="k9a-Nv-TFy" secondAttribute="leading" id="xQM-Q0-EWB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LAy-xH-oH3" firstAttribute="trailing" secondItem="JOw-eI-WLV" secondAttribute="trailing" constant="15" id="4ep-gZ-RyK"/>
+                            <constraint firstItem="ojG-p9-6Ta" firstAttribute="centerX" secondItem="JOw-eI-WLV" secondAttribute="centerX" id="Dxe-aE-1a9"/>
+                            <constraint firstItem="k9a-Nv-TFy" firstAttribute="leading" secondItem="UGP-dp-0bK" secondAttribute="leading" priority="750" constant="10" id="HNc-dr-fNA"/>
+                            <constraint firstItem="Lrd-si-BBQ" firstAttribute="centerX" secondItem="gw7-1R-xZl" secondAttribute="centerX" id="JZb-bb-Ncz"/>
+                            <constraint firstItem="gw7-1R-xZl" firstAttribute="top" secondItem="ojG-p9-6Ta" secondAttribute="bottom" constant="10" id="L53-3k-8NL"/>
+                            <constraint firstItem="f0T-Ib-hD0" firstAttribute="centerY" secondItem="LAy-xH-oH3" secondAttribute="centerY" id="LR2-nf-mRp"/>
+                            <constraint firstAttribute="trailing" secondItem="k9a-Nv-TFy" secondAttribute="trailing" priority="750" constant="10" id="PNv-Rj-gG4"/>
+                            <constraint firstItem="X8w-mc-RaY" firstAttribute="trailing" secondItem="LAy-xH-oH3" secondAttribute="trailing" id="TGm-qA-gza"/>
+                            <constraint firstItem="k9a-Nv-TFy" firstAttribute="centerY" secondItem="LAy-xH-oH3" secondAttribute="centerY" id="UjW-Jd-VFV"/>
+                            <constraint firstItem="5Ma-l3-WaQ" firstAttribute="top" secondItem="LAy-xH-oH3" secondAttribute="top" id="VqT-pl-frX"/>
+                            <constraint firstAttribute="bottom" secondItem="X8w-mc-RaY" secondAttribute="bottom" id="WHP-oG-YQb"/>
+                            <constraint firstItem="X8w-mc-RaY" firstAttribute="leading" secondItem="LAy-xH-oH3" secondAttribute="leading" id="Y1x-hd-ZOz"/>
+                            <constraint firstItem="f0T-Ib-hD0" firstAttribute="centerX" secondItem="LAy-xH-oH3" secondAttribute="centerX" id="a6f-XA-Ccu"/>
+                            <constraint firstItem="ojG-p9-6Ta" firstAttribute="top" secondItem="JOw-eI-WLV" secondAttribute="bottom" constant="20" id="cvy-nD-Fbq"/>
+                            <constraint firstItem="X8w-mc-RaY" firstAttribute="top" secondItem="UGP-dp-0bK" secondAttribute="top" id="cwH-pp-dns"/>
+                            <constraint firstItem="Lrd-si-BBQ" firstAttribute="top" secondItem="gw7-1R-xZl" secondAttribute="bottom" constant="10" id="dr9-XQ-gBb"/>
+                            <constraint firstItem="WRp-MJ-dJM" firstAttribute="leading" secondItem="LAy-xH-oH3" secondAttribute="leading" constant="16" id="jgx-xa-b1L"/>
+                            <constraint firstItem="JOw-eI-WLV" firstAttribute="top" secondItem="LAy-xH-oH3" secondAttribute="top" id="mtp-ug-gHt"/>
+                            <constraint firstItem="gw7-1R-xZl" firstAttribute="centerX" secondItem="ojG-p9-6Ta" secondAttribute="centerX" id="wog-5g-wMC"/>
+                            <constraint firstItem="k9a-Nv-TFy" firstAttribute="centerX" secondItem="LAy-xH-oH3" secondAttribute="centerX" id="yDk-oF-diz"/>
+                            <constraint firstItem="LAy-xH-oH3" firstAttribute="bottom" secondItem="WRp-MJ-dJM" secondAttribute="bottom" constant="3" id="yE8-vo-87p"/>
+                            <constraint firstItem="5Ma-l3-WaQ" firstAttribute="leading" secondItem="LAy-xH-oH3" secondAttribute="leading" constant="15" id="ynm-BB-ZI1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LAy-xH-oH3"/>
+                    </view>
+                    <connections>
+                        <outlet property="arView" destination="X8w-mc-RaY" id="n94-XJ-vW1"/>
+                        <outlet property="exitGameButton" destination="5Ma-l3-WaQ" id="P5g-mm-8r6"/>
+                        <outlet property="labelGameOver" destination="PlP-gB-wxc" id="fyB-Ih-4r1"/>
+                        <outlet property="labelSetMyScore" destination="wqc-Qa-Mja" id="W9p-bJ-5vL"/>
+                        <outlet property="labelSetRecord" destination="RGW-fv-rgu" id="U1d-AL-MUt"/>
+                        <outlet property="labelSetResult" destination="KlC-XZ-yIs" id="hUZ-i9-e6d"/>
+                        <outlet property="labelSetTheirScore" destination="B4p-Sa-JPP" id="3Ev-we-rCA"/>
+                        <outlet property="manualSelectionButton" destination="JOw-eI-WLV" id="kEP-jH-qHz"/>
+                        <outlet property="resetGameButton" destination="WRp-MJ-dJM" id="pA6-mH-70k"/>
+                        <outlet property="resultsContainer" destination="JAD-wa-q3H" id="dQW-WV-aaY"/>
+                        <outlet property="scoreContainer" destination="k9a-Nv-TFy" id="3PY-vo-2rA"/>
+                        <outlet property="selectPaperButton" destination="gw7-1R-xZl" id="jcw-Y7-6hz"/>
+                        <outlet property="selectRockButton" destination="ojG-p9-6Ta" id="hWs-8x-oYa"/>
+                        <outlet property="selectScissorsButton" destination="Lrd-si-BBQ" id="NCX-wv-HIC"/>
+                        <outlet property="shootCurrentButton" destination="f0T-Ib-hD0" id="wgP-b0-DmE"/>
+                        <outlet property="theirScoreContainer" destination="eKK-ow-0AZ" id="kdo-Uy-zLe"/>
+                        <outlet property="yourScoreContainer" destination="Elb-VG-JgT" id="S0h-W9-KkT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XZs-kW-lJZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-628" y="572"/>
+        </scene>
+        <!--Play Online View Controller-->
+        <scene sceneID="EAF-6N-l3v">
+            <objects>
+                <viewController id="JsB-sS-RFM" customClass="PlayOnlineViewController" customModule="Rock__Paper__ScissARs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eq0-OS-zDX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Play ONLINE!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFt-BQ-vBq">
+                                <rect key="frame" x="16" y="236" width="343" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="N4F-dJ-S3Y"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ws-fh-UaN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="97" y="398"/>
+        </scene>
+        <!--Main Tab Bar View Controller-->
+        <scene sceneID="Gdm-Qz-0Fy">
+            <objects>
+                <tabBarController id="xPv-Xk-BEP" customClass="MainTabBarViewController" customModule="Rock__Paper__ScissARs" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="kzO-aB-EXB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.023529411760000001" green="0.062745098040000002" blue="0.074509803920000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="cHo-Cl-lzD" kind="relationship" relationship="viewControllers" id="IAy-LK-zQ7"/>
+                        <segue destination="oYH-us-asr" kind="relationship" relationship="viewControllers" id="nIf-vB-e8F"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BCq-vw-f5V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="308" y="-1203"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Logo" width="512" height="326"/>
+        <image name="add_icon" width="36" height="36"/>
+        <image name="exit_icon" width="36" height="36"/>
+        <image name="icon_paper" width="36" height="36"/>
+        <image name="icon_rock" width="36" height="36"/>
+        <image name="icon_scissors" width="36" height="36"/>
+        <image name="questionBubble" width="64" height="64"/>
+        <image name="reset_icon" width="36" height="36"/>
+        <image name="rock" width="120" height="120"/>
+        <image name="settings_icon" width="36" height="36"/>
+        <image name="videogame_icon" width="36" height="36"/>
+    </resources>
+</document>
