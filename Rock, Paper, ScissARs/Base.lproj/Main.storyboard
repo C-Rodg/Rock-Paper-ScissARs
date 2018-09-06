@@ -73,7 +73,7 @@
                                         <rect key="frame" x="0.0" y="253" width="350" height="170"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rock:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Cc-cB-Bxb">
-                                                <rect key="frame" x="5" y="0.0" width="150" height="17"/>
+                                                <rect key="frame" x="5" y="68" width="150" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="sH1-PE-tM5"/>
                                                 </constraints>
@@ -82,7 +82,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scissors:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4OS-ET-iTj">
-                                                <rect key="frame" x="5" y="54" width="150" height="17"/>
+                                                <rect key="frame" x="5" y="122" width="150" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="GIK-gK-0zd"/>
                                                 </constraints>
@@ -91,7 +91,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paper:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAR-dc-ibY">
-                                                <rect key="frame" x="5" y="27" width="150" height="17"/>
+                                                <rect key="frame" x="5" y="95" width="150" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="u3A-JV-i9M"/>
                                                 </constraints>
@@ -100,25 +100,25 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIO-86-dOL">
-                                                <rect key="frame" x="155" y="0.0" width="195" height="17"/>
+                                                <rect key="frame" x="155" y="68" width="195" height="17"/>
                                                 <fontDescription key="fontDescription" name="Ikaros-Regular" family="Ikaros Sans" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nan-8Q-awu">
-                                                <rect key="frame" x="155" y="27" width="195" height="17"/>
+                                                <rect key="frame" x="155" y="95" width="195" height="17"/>
                                                 <fontDescription key="fontDescription" name="Ikaros-Regular" family="Ikaros Sans" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAv-dC-MS0">
-                                                <rect key="frame" x="155" y="54" width="195" height="17"/>
+                                                <rect key="frame" x="155" y="122" width="195" height="17"/>
                                                 <fontDescription key="fontDescription" name="Ikaros-Regular" family="Ikaros Sans" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wins:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzw-dF-fTc">
-                                                <rect key="frame" x="5" y="91" width="150" height="19"/>
+                                                <rect key="frame" x="5" y="0.0" width="150" height="19"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="A1x-RF-BFi"/>
                                                 </constraints>
@@ -127,7 +127,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Losses:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44S-yM-UTz">
-                                                <rect key="frame" x="5" y="120" width="150" height="19"/>
+                                                <rect key="frame" x="5" y="29" width="150" height="19"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="ly6-HG-vOJ"/>
                                                 </constraints>
@@ -136,13 +136,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 wins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KNo-wb-PKC">
-                                                <rect key="frame" x="155" y="91" width="195" height="19"/>
+                                                <rect key="frame" x="155" y="0.0" width="195" height="19"/>
                                                 <fontDescription key="fontDescription" name="Ikaros-Regular" family="Ikaros Sans" pointSize="19"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 losses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9J-Ae-AZU">
-                                                <rect key="frame" x="155" y="120" width="195" height="19"/>
+                                                <rect key="frame" x="155" y="29" width="195" height="19"/>
                                                 <fontDescription key="fontDescription" name="Ikaros-Regular" family="Ikaros Sans" pointSize="19"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -151,8 +151,8 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="gIO-86-dOL" secondAttribute="trailing" id="3ZZ-9j-AVj"/>
                                             <constraint firstAttribute="trailing" secondItem="nan-8Q-awu" secondAttribute="trailing" id="7x6-rP-HRy"/>
-                                            <constraint firstItem="5Cc-cB-Bxb" firstAttribute="top" secondItem="0b8-O8-3EI" secondAttribute="top" id="Dms-3g-P6x"/>
-                                            <constraint firstItem="vzw-dF-fTc" firstAttribute="top" secondItem="4OS-ET-iTj" secondAttribute="bottom" constant="20" id="F8q-rX-FoF">
+                                            <constraint firstItem="5Cc-cB-Bxb" firstAttribute="top" secondItem="44S-yM-UTz" secondAttribute="bottom" constant="20" id="Dms-3g-P6x"/>
+                                            <constraint firstItem="vzw-dF-fTc" firstAttribute="top" secondItem="0b8-O8-3EI" secondAttribute="top" id="F8q-rX-FoF">
                                                 <variation key="heightClass=compact" constant="5"/>
                                             </constraint>
                                             <constraint firstItem="gIO-86-dOL" firstAttribute="centerY" secondItem="5Cc-cB-Bxb" secondAttribute="centerY" id="GMR-Ow-Y8w"/>
