@@ -8,7 +8,7 @@ An augmented reality roshambo game for iOS. Experience the classic game of Rock,
 
 ## Availability
 
-Coming soon to the [iOS app store](https://itunes.apple.com/app/rock-paper-scissars/id1433851474).
+Now on the [iOS app store](https://itunes.apple.com/app/rock-paper-scissars/id1433851474).
 
 ## How to Play
 
@@ -17,6 +17,10 @@ Simply show your hand to your devices camera and it will detect your current han
 - **Rock**: Beats scissors. Loses to paper.
 - **Paper**: Beats rock. Loses to scissors.
 - **Scissors**: Beats paper. Loses to rock.
+
+## Coming Soon
+
+- Game Center integration with multiplayer!
 
 ## Documentation
 
