@@ -34,6 +34,9 @@
 		});
 
 	$('a[href*=\\#]').on('click', function(event) {
+		if (event.target.matches('.navigate')) {
+			return;
+		}
 		event.preventDefault();
 		var offset = $(this.hash).offset();
 		if (offset.top) {
@@ -43,6 +46,6 @@
 				},
 				500
 			);
-		}		
+		}
 	});
 })();
