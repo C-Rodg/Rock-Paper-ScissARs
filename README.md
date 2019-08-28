@@ -26,8 +26,8 @@ Simply show your hand to your devices camera and it will detect your current han
 
 ## Documentation
 
-Please see our [product page](https://curtisrodgers.com/Rock-Paper-ScissARs) for more info.
+Please see our [product page](https://rock-paper-scissars.curtisrodgers.com) for more info.
 
 ## Contributors
 
-Curtis Rodgers (me) : https://curtisrodgers.com
+Curtis Rodgers (me) : [https://curtisrodgers.com](https://curtisrodgers.com)

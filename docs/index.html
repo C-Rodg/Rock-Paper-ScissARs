@@ -1,168 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>RPS</title>
-	<meta property="og:title" content="RPS" />
-	<meta property="og:locale" content="en_US" />
-	<meta name="description" content="An augmented reality rock, paper, scissors game." />
-	<meta property="og:description" content="An augmented reality rock, paper, scissors game." />
-	<meta property="og:url" content="https://curtisrodgers.com/" />
-	<meta property="og:site_name" content="RPS" />
-	<meta property="og:image" content="./images/apple-icon-precomposed.png" />
-	<link rel="apple-touch-icon" sizes="57x57" href="./images/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="./images/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="./images/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="./images/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="./images/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="./images/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="./images/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="./images/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="./images/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192"  href="./images/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="./images/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
-	<link rel="manifest" href="/manifest.json">
-	<meta name="msapplication-TileColor" content="#ffffff">
-	<meta name="msapplication-TileImage" content="./images/ms-icon-144x144.png">
-	<meta name="theme-color" content="#ffffff">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300|Rubik:300" />
-	<link rel="stylesheet" href="./css/styles.css" />
-</head>
-<body>
-	<header id="mainHeader">
-		<div class="container">
-			<div class="company-name">
-				<a href="/" class="cc-active">
-					<span class="dark-logo"><img src="./images/rps_logo_small_nobg.png" alt="dark RPS logo" /></span>
-					<span class="light-logo"><img src="./images/rps_logo_small_nobg.png" alt="light RPS logo"/></span>
-				</a>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>RPS</title>
+		<meta property="og:title" content="RPS" />
+		<meta property="og:locale" content="en_US" />
+		<meta
+			name="description"
+			content="An augmented reality rock, paper, scissors game."
+		/>
+		<meta
+			property="og:description"
+			content="An augmented reality rock, paper, scissors game."
+		/>
+		<meta property="og:url" content="https://curtisrodgers.com/" />
+		<meta property="og:site_name" content="RPS" />
+		<meta property="og:image" content="./images/apple-icon-precomposed.png" />
+		<link
+			rel="apple-touch-icon"
+			sizes="57x57"
+			href="./images/apple-icon-57x57.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="60x60"
+			href="./images/apple-icon-60x60.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="72x72"
+			href="./images/apple-icon-72x72.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="76x76"
+			href="./images/apple-icon-76x76.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="114x114"
+			href="./images/apple-icon-114x114.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="120x120"
+			href="./images/apple-icon-120x120.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="144x144"
+			href="./images/apple-icon-144x144.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="152x152"
+			href="./images/apple-icon-152x152.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="./images/apple-icon-180x180.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="192x192"
+			href="./images/android-icon-192x192.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="96x96"
+			href="./images/favicon-96x96.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="./images/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="/manifest.json" />
+		<meta name="msapplication-TileColor" content="#ffffff" />
+		<meta
+			name="msapplication-TileImage"
+			content="./images/ms-icon-144x144.png"
+		/>
+		<meta name="theme-color" content="#ffffff" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Lato:300|Rubik:300"
+		/>
+		<link rel="stylesheet" href="./css/styles.css" />
+	</head>
+	<body>
+		<header id="mainHeader">
+			<div class="container">
+				<div class="company-name">
+					<a href="/" class="cc-active">
+						<span class="dark-logo"
+							><img src="./images/rps_logo_small_nobg.png" alt="dark RPS logo"
+						/></span>
+						<span class="light-logo"
+							><img src="./images/rps_logo_small_nobg.png" alt="light RPS logo"
+						/></span>
+					</a>
+				</div>
+				<nav>
+					<a class="nav-toggle cc-active" id="open-nav" href="#">&#9776;</a>
+					<a href="https://curtisrodgers.com/" class="navigate">Contact</a>
+				</nav>
 			</div>
-			<nav>
-				<a class="nav-toggle cc-active" id="open-nav" href="#">&#9776;</a>
-				<a href="https://curtisrodgers.com/dist/index.html#/about" class="navigate">About</a>
-				<a href="https://curtisrodgers.com/dist/index.html#/contact" class="navigate">Contact</a>
-			</nav>
-		</div>
-	</header>
-	<section class="hero" style="background-image: url(./images/bgHeader.jpeg)">
-		<div class="inner-hero text-container">
-			<div class="hero-text-container">
-				<h1 class="editable">Rock, Paper, ScissARs</h1>
-				<p class="subtext editable">An augmented reality roshambo game for iOS.  Experience the classic game of Rock, Paper, Scissors like never before.</p>
-				<div class="cta button alt"><a href="https://itunes.apple.com/app/rock-paper-scissars/id1433851474" class="cc-active">Play Now</a></div>
-			</div>
-		</div>
-		<div class="learn-more"><a href="#learn-more">Learn more <span class="arrow">&#x25BC;</span></a></div>
-	</section>
-	<div class="content">
-		<section class="info" id="learn-more">
-			<div class="container flex">
-				<div class="text">
-					<h2 class="editable">Augmented Reality</h2>
-					<p class="editable">Use your phones camera to detect the hand formation you will choose to play.</p>
-				</div>
-				<div class="image">
-					<img class="editable" src="./images/rps_play.jpg" alt="Augmented Reality Rock, Paper, Scissors" />
-				</div>
-			</div>
-		</section>
-
-		<section class="info">
-			<div class="container flex">
-				<div class="text">
-					<h2 class="editable" >Play Versus Computer</h2>
-					<p class="editable" >Think you can beat technology?  Challenge the computer in a best of 1/3/5/7 series.</p>
-				</div>
-				<div class="image">
-					<img class="editable" src="./images/rps_home.jpg" alt="Play versus the computer" />
-				</div>
-			</div>
-		</section>
-
-		<section class="info">
-			<div class="container flex">
-				<div class="text">
-					<h2 class="editable" >Track Stats</h2>
-					<p class="editable" >Analyze what hand formation you seem to prefer to make yourself nearly unbeatable down the line.</p>
-				</div>
-				<div class="image">
-					<img class="editable" src="./images/rps_settings.jpg" alt="Track your stats" />
-				</div>
-			</div>
-		</section>
-
-		<section class="info how-to-play">
-			<div class="container flex">
-				<div class="text">
-					<h2 class="editable" >How To Play:</h2>
-					<p class="editable" >After beginning a game, just display your hand position to the camera on your device and tap on the overlay icon when you are ready to 'shoot'. From there the rules of the game are simple:</p>
-					<ul>
-						<li><b>Rock</b>: Beats scissors. Loses to paper.</li>
-						<li><b>Paper</b>: Beats rock. Loses to scissors.</li>
-						<li><b>Scissors</b>: Beats paper. Loses to rock.</li>
-					</ul>
-
-					<p class="editable">Overlay Button Functionality:</p>
-					<ul>
-						<li>Exit Game - top left: This will quit the current game.  The current game status will not be saved.</li>
-						<li>Reset Game - bottom left: This will reset the current game.</li>
-						<li>Manual Play - top right: If the camera is having a difficult time picking up the correct position, hit this button to manually select rock, paper, or scissors.</li>
-					</ul>
-				</div>
-				<div class="image">
-					<img class="editable" src="./images/rps_order.png" alt="Rock, Paper, Scissors!" />
-				</div>
-			</div>
-		</section>
-
-		<section class="hero" style="background-image: url(./images/bgFooter.jpeg)">
+		</header>
+		<section class="hero" style="background-image: url(./images/bgHeader.jpeg)">
 			<div class="inner-hero text-container">
 				<div class="hero-text-container">
-					<h2 class="editable">Great for All Ages!</h2>
-					<p class="subtext editable">Come experience the classic game with a fun, augmented reality twist.</p>
-					<div class="cta button alt"><a href="https://itunes.apple.com/app/rock-paper-scissars/id1433851474" class="cc-active">Try It</a></div>
+					<h1 class="editable">Rock, Paper, ScissARs</h1>
+					<p class="subtext editable">
+						An augmented reality roshambo game for iOS. Experience the classic
+						game of Rock, Paper, Scissors like never before.
+					</p>
+					<div class="cta button alt">
+						<a
+							href="https://itunes.apple.com/app/rock-paper-scissars/id1433851474"
+							class="cc-active"
+							>Play Now</a
+						>
+					</div>
 				</div>
 			</div>
+			<div class="learn-more">
+				<a href="#learn-more">Learn more <span class="arrow">&#x25BC;</span></a>
+			</div>
 		</section>
-	</div>
-	<footer>
-		<div class="container">
-			<ul class="footer-left-links">
+		<div class="content">
+			<section class="info" id="learn-more">
+				<div class="container flex">
+					<div class="text">
+						<h2 class="editable">Augmented Reality</h2>
+						<p class="editable">
+							Use your phones camera to detect the hand formation you will
+							choose to play.
+						</p>
+					</div>
+					<div class="image">
+						<img
+							class="editable"
+							src="./images/rps_play.jpg"
+							alt="Augmented Reality Rock, Paper, Scissors"
+						/>
+					</div>
+				</div>
+			</section>
+
+			<section class="info">
+				<div class="container flex">
+					<div class="text">
+						<h2 class="editable">Play Versus Computer</h2>
+						<p class="editable">
+							Think you can beat technology? Challenge the computer in a best of
+							1/3/5/7 series.
+						</p>
+					</div>
+					<div class="image">
+						<img
+							class="editable"
+							src="./images/rps_home.jpg"
+							alt="Play versus the computer"
+						/>
+					</div>
+				</div>
+			</section>
+
+			<section class="info">
+				<div class="container flex">
+					<div class="text">
+						<h2 class="editable">Track Stats</h2>
+						<p class="editable">
+							Analyze what hand formation you seem to prefer to make yourself
+							nearly unbeatable down the line.
+						</p>
+					</div>
+					<div class="image">
+						<img
+							class="editable"
+							src="./images/rps_settings.jpg"
+							alt="Track your stats"
+						/>
+					</div>
+				</div>
+			</section>
+
+			<section class="info how-to-play">
+				<div class="container flex">
+					<div class="text">
+						<h2 class="editable">How To Play:</h2>
+						<p class="editable">
+							After beginning a game, just display your hand position to the
+							camera on your device and tap on the overlay icon when you are
+							ready to 'shoot'. From there the rules of the game are simple:
+						</p>
+						<ul>
+							<li><b>Rock</b>: Beats scissors. Loses to paper.</li>
+							<li><b>Paper</b>: Beats rock. Loses to scissors.</li>
+							<li><b>Scissors</b>: Beats paper. Loses to rock.</li>
+						</ul>
+
+						<p class="editable">Overlay Button Functionality:</p>
+						<ul>
+							<li>
+								Exit Game - top left: This will quit the current game. The
+								current game status will not be saved.
+							</li>
+							<li>
+								Reset Game - bottom left: This will reset the current game.
+							</li>
+							<li>
+								Manual Play - top right: If the camera is having a difficult
+								time picking up the correct position, hit this button to
+								manually select rock, paper, or scissors.
+							</li>
+						</ul>
+					</div>
+					<div class="image">
+						<img
+							class="editable"
+							src="./images/rps_order.png"
+							alt="Rock, Paper, Scissors!"
+						/>
+					</div>
+				</div>
+			</section>
+
+			<section
+				class="hero"
+				style="background-image: url(./images/bgFooter.jpeg)"
+			>
+				<div class="inner-hero text-container">
+					<div class="hero-text-container">
+						<h2 class="editable">Great for All Ages!</h2>
+						<p class="subtext editable">
+							Come experience the classic game with a fun, augmented reality
+							twist.
+						</p>
+						<div class="cta button alt">
+							<a
+								href="https://itunes.apple.com/app/rock-paper-scissars/id1433851474"
+								class="cc-active"
+								>Try It</a
+							>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<footer>
+			<div class="container">
+				<ul class="footer-left-links">
 					<li>
-						<a href="https://curtisrodgers.com/dist/index.html#/about">
-							About
-						</a>
-					</li>
-					<li>
-						<a href="https://curtisrodgers.com/dist/index.html#/contact">
+						<a href="https://curtisrodgers.com/">
 							Contact
 						</a>
 					</li>
-			</ul>
-			<ul class="footer-right-links">
+				</ul>
+				<ul class="footer-right-links">
 					<li>
-						<a target="_blank" href="https://www.linkedin.com/in/crodg/" class="linkedin-icon">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg>
+						<a
+							target="_blank"
+							href="https://www.linkedin.com/in/crodg/"
+							class="linkedin-icon"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+							>
+								<path
+									d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"
+								/>
+							</svg>
 						</a>
-					</li>					
+					</li>
 					<li>
-						<a target="_blank" href="https://github.com/C-Rodg/" class="github-icon">
-							<svg height="24"  viewBox="0 0 16 16" version="1.1" width="24" ><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+						<a
+							target="_blank"
+							href="https://github.com/C-Rodg/"
+							class="github-icon"
+						>
+							<svg height="24" viewBox="0 0 16 16" version="1.1" width="24">
+								<path
+									fill-rule="evenodd"
+									d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+								></path>
+							</svg>
 						</a>
-					</li>																				
-			</ul>
-			<p class="copyright">
-				<a href="https://curtisrodgers.com/">
-					Curtis Rodgers
-				</a>
-			</p>
-		</div>
-	</footer>
+					</li>
+				</ul>
+				<p class="copyright">
+					<a href="https://curtisrodgers.com/">
+						Curtis Rodgers
+					</a>
+				</p>
+			</div>
+		</footer>
 
-<script src="./js/jquery.min.js"></script>
-<script src="./js/main.js"></script>
-</body>
+		<script src="./js/jquery.min.js"></script>
+		<script src="./js/main.js"></script>
+	</body>
 </html>
