@@ -1,5 +1,7 @@
 # Rock, Paper, ScissARs
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8690ffe0-05ba-48ee-b652-7c7aa2121f9c/deploy-status)](https://app.netlify.com/sites/cr-rock-paper-scissars/deploys)
+
 An augmented reality rock, paper, scissors game.
 
 ## Description
